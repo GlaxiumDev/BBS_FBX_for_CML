@@ -1,0 +1,417 @@
+[10:15:48] [main/INFO] (FabricLoader/GameProvider) Loading Minecraft 1.20.4 with Fabric Loader 0.16.14
+[10:15:49] [main/INFO] (FabricLoader) Loading 57 mods:
+	- bbs 2.0-beta-1-1.20.4
+	- bbs-fbx-addon 1.0.0-1.20.4
+	- fabric-api 0.91.1+1.20.4
+	- fabric-api-base 0.4.34+f31bf88132
+	- fabric-api-lookup-api-v1 1.6.44+9468a19d32
+	- fabric-biome-api-v1 13.0.14+9468a19d32
+	- fabric-block-api-v1 1.0.13+73761d2e32
+	- fabric-block-view-api-v2 1.0.2+73761d2e32
+	- fabric-blockrenderlayer-v1 1.1.44+f4b7e42432
+	- fabric-client-tags-api-v1 1.1.5+86b1264532
+	- fabric-command-api-v1 1.2.39+f71b366f32
+	- fabric-command-api-v2 2.2.18+23e8616e32
+	- fabric-commands-v0 0.2.56+df3654b332
+	- fabric-containers-v0 0.1.80+df3654b332
+	- fabric-content-registries-v0 5.0.8+9468a19d32
+	- fabric-convention-tags-v1 1.5.8+9468a19d32
+	- fabric-crash-report-info-v1 0.2.21+f4b7e42432
+	- fabric-data-generation-api-v1 13.1.16+1b2a41bc32
+	- fabric-dimensions-v1 2.1.59+a2e8758a32
+	- fabric-entity-events-v1 1.5.26+9468a19d32
+	- fabric-events-interaction-v0 0.6.13+9468a19d32
+	- fabric-events-lifecycle-v0 0.2.70+df3654b332
+	- fabric-game-rule-api-v1 1.0.44+6f7ba8f232
+	- fabric-gametest-api-v1 1.2.18+9468a19d32
+	- fabric-item-api-v1 2.1.33+9468a19d32
+	- fabric-item-group-api-v1 4.0.19+f6e85ac232
+	- fabric-key-binding-api-v1 1.0.39+f4b7e42432
+	- fabric-keybindings-v0 0.2.37+df3654b332
+	- fabric-lifecycle-events-v1 2.2.28+9468a19d32
+	- fabric-loot-api-v2 2.1.3+6f9f09e032
+	- fabric-message-api-v1 6.0.3+ebb1549632
+	- fabric-mining-level-api-v1 2.1.58+f4b7e42432
+	- fabric-model-loading-api-v1 1.0.6+9468a19d32
+	- fabric-models-v0 0.4.5+9386d8a732
+	- fabric-networking-api-v1 3.1.1+901470e432
+	- fabric-object-builder-api-v1 13.0.6+a2e8758a32
+	- fabric-particles-v1 1.1.5+f4b7e42432
+	- fabric-recipe-api-v1 2.0.14+23e8616e32
+	- fabric-registry-sync-v0 4.0.12+9468a19d32
+	- fabric-renderer-api-v1 3.2.2+2034447c32
+	- fabric-renderer-indigo 1.5.2+2034447c32
+	- fabric-renderer-registries-v1 3.2.49+df3654b332
+	- fabric-rendering-data-attachment-v1 0.3.40+73761d2e32
+	- fabric-rendering-fluids-v1 3.0.31+f4b7e42432
+	- fabric-rendering-v0 1.1.52+df3654b332
+	- fabric-rendering-v1 3.0.11+9468a19d32
+	- fabric-resource-conditions-api-v1 2.3.12+de5c6cca32
+	- fabric-resource-loader-v0 0.11.14+f31bf88132
+	- fabric-screen-api-v1 2.0.15+f6e85ac232
+	- fabric-screen-handler-api-v1 1.3.49+9468a19d32
+	- fabric-sound-api-v1 1.0.15+f4b7e42432
+	- fabric-transfer-api-v1 4.0.5+aaf9c96932
+	- fabric-transitive-access-wideners-v1 5.0.12+1b2a41bc32
+	- fabricloader 0.16.14
+	- java 21
+	- minecraft 1.20.4
+	- mixinextras 0.4.1
+[10:15:49] [main/INFO] (FabricLoader/Mixin) SpongePowered MIXIN Subsystem Version=0.8.7 Source=file:/home/glaxium/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.15.5+mixin.0.8.7/22f9eb729e216a091673a574a5906dc1b9027fb3/sponge-mixin-0.15.5+mixin.0.8.7.jar Service=Knot/Fabric Env=CLIENT
+[10:15:49] [main/INFO] (FabricLoader/Mixin) Loaded Fabric development mappings for mixin remapper!
+[10:15:49] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_16
+[10:15:49] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_17
+[10:15:49] [main/WARN] (FabricLoader/Mixin) Error loading class: net/irisshaders/iris/uniforms/SystemTimeUniforms$Timer (java.lang.ClassNotFoundException: net/irisshaders/iris/uniforms/SystemTimeUniforms$Timer)
+[10:15:49] [main/WARN] (FabricLoader/Mixin) @Mixin target net.irisshaders.iris.uniforms.SystemTimeUniforms$Timer was not found bbs.client.mixins.json:iris.SystemTimeUniformsTimerMixin from mod bbs
+[10:15:49] [main/WARN] (FabricLoader/Mixin) Error loading class: me/jellysquid/mods/sodium/client/render/vertex/buffer/SodiumBufferBuilder (java.lang.ClassNotFoundException: me/jellysquid/mods/sodium/client/render/vertex/buffer/SodiumBufferBuilder)
+[10:15:49] [main/WARN] (FabricLoader/Mixin) @Mixin target me.jellysquid.mods.sodium.client.render.vertex.buffer.SodiumBufferBuilder was not found bbs.client.mixins.json:sodium.SodiumBufferBuilderAccessor from mod bbs
+[10:15:49] [main/WARN] (FabricLoader/Mixin) Error loading class: net/caffeinemc/mods/sodium/api/vertex/attributes/common/ColorAttribute (java.lang.ClassNotFoundException: net/caffeinemc/mods/sodium/api/vertex/attributes/common/ColorAttribute)
+[10:15:49] [main/WARN] (FabricLoader/Mixin) @Mixin target net.caffeinemc.mods.sodium.api.vertex.attributes.common.ColorAttribute was not found bbs.client.mixins.json:sodium.ColorAttributeMixin from mod bbs
+[10:15:49] [main/WARN] (FabricLoader/Mixin) Error loading class: net/irisshaders/iris/compat/sodium/impl/vertex_format/entity_xhfp/EntityVertex (java.lang.ClassNotFoundException: net/irisshaders/iris/compat/sodium/impl/vertex_format/entity_xhfp/EntityVertex)
+[10:15:49] [main/WARN] (FabricLoader/Mixin) @Mixin target net.irisshaders.iris.compat.sodium.impl.vertex_format.entity_xhfp.EntityVertex was not found bbs.client.mixins.json:iris.EntityVertexMixin from mod bbs
+[10:15:49] [main/WARN] (FabricLoader/Mixin) Error loading class: net/irisshaders/iris/pipeline/IrisRenderingPipeline (java.lang.ClassNotFoundException: net/irisshaders/iris/pipeline/IrisRenderingPipeline)
+[10:15:49] [main/WARN] (FabricLoader/Mixin) @Mixin target net.irisshaders.iris.pipeline.IrisRenderingPipeline was not found bbs.client.mixins.json:iris.IrisRenderingPipelineAccessor from mod bbs
+[10:15:49] [main/WARN] (FabricLoader/Mixin) Error loading class: net/irisshaders/iris/uniforms/custom/CustomUniforms$Builder (java.lang.ClassNotFoundException: net/irisshaders/iris/uniforms/custom/CustomUniforms$Builder)
+[10:15:49] [main/WARN] (FabricLoader/Mixin) @Mixin target net.irisshaders.iris.uniforms.custom.CustomUniforms$Builder was not found bbs.client.mixins.json:iris.CustomUniformsBuilderMixin from mod bbs
+[10:15:49] [main/WARN] (FabricLoader/Mixin) Error loading class: net/irisshaders/iris/uniforms/custom/CustomUniforms (java.lang.ClassNotFoundException: net/irisshaders/iris/uniforms/custom/CustomUniforms)
+[10:15:49] [main/WARN] (FabricLoader/Mixin) @Mixin target net.irisshaders.iris.uniforms.custom.CustomUniforms was not found bbs.client.mixins.json:iris.CustomUniformsAccessor from mod bbs
+[10:15:49] [main/WARN] (FabricLoader/Mixin) Error loading class: net/irisshaders/iris/shaderpack/preprocessor/JcppProcessor (java.lang.ClassNotFoundException: net/irisshaders/iris/shaderpack/preprocessor/JcppProcessor)
+[10:15:49] [main/WARN] (FabricLoader/Mixin) @Mixin target net.irisshaders.iris.shaderpack.preprocessor.JcppProcessor was not found bbs.client.mixins.json:iris.JcppProcessorMixin from mod bbs
+[10:15:49] [main/WARN] (FabricLoader/Mixin) Error loading class: net/irisshaders/iris/shaderpack/ShaderPack (java.lang.ClassNotFoundException: net/irisshaders/iris/shaderpack/ShaderPack)
+[10:15:49] [main/WARN] (FabricLoader/Mixin) @Mixin target net.irisshaders.iris.shaderpack.ShaderPack was not found bbs.client.mixins.json:iris.ShaderPackMixin from mod bbs
+[10:15:49] [main/WARN] (FabricLoader/Mixin) Error loading class: net/irisshaders/iris/Iris (java.lang.ClassNotFoundException: net/irisshaders/iris/Iris)
+[10:15:49] [main/WARN] (FabricLoader/Mixin) @Mixin target net.irisshaders.iris.Iris was not found bbs.client.mixins.json:iris.IrisMixin from mod bbs
+[10:15:49] [main/WARN] (FabricLoader/Mixin) Error loading class: net/irisshaders/iris/gui/element/widget/SliderElementWidget (java.lang.ClassNotFoundException: net/irisshaders/iris/gui/element/widget/SliderElementWidget)
+[10:15:49] [main/WARN] (FabricLoader/Mixin) @Mixin target net.irisshaders.iris.gui.element.widget.SliderElementWidget was not found bbs.client.mixins.json:iris.SliderElementWidgetMixin from mod bbs
+[10:15:49] [main/WARN] (FabricLoader/Mixin) Error loading class: net/irisshaders/iris/gui/element/widget/StringElementWidget (java.lang.ClassNotFoundException: net/irisshaders/iris/gui/element/widget/StringElementWidget)
+[10:15:49] [main/WARN] (FabricLoader/Mixin) @Mixin target net.irisshaders.iris.gui.element.widget.StringElementWidget was not found bbs.client.mixins.json:iris.StringElementWidgetInvoker from mod bbs
+[10:15:49] [main/INFO] (FabricLoader/MixinExtras|Service) Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.4.1).
+[10:15:52] [Datafixer Bootstrap/INFO] (Minecraft) 198 Datafixer optimizations took 71 milliseconds
+[10:15:53] [Render thread/INFO] (Minecraft) Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
+[10:15:53] [Render thread/INFO] (Minecraft) Setting user: Player952
+[10:15:53] [Render thread/INFO] (fabric-networking-api-v1) Force Packet Serialization is enabled to mimic remote connection on single player, this is the default behaviour on dev env. Add -Dfabric-api.networking.force-packet-serialization=false JVM arg to disable it.
+[10:15:53] [Render thread/INFO] (BBS Fbx Addon) BBS Fbx Addon ready
+[10:15:53] [Render thread/INFO] (Minecraft) [STDOUT]: Loading language file "assets:strings/en_us.json".
+[10:15:53] [Render thread/INFO] (Minecraft) [STDOUT]: Loading language file "assets:strings/en_us.json".
+[10:15:53] [Render thread/INFO] (Minecraft) [STDERR]: Failed to load bbs_fbx:lang/en_us.json language file!
+[10:15:53] [Render thread/INFO] (Minecraft) [STDERR]: java.io.FileNotFoundException: Asset bbs_fbx:lang/en_us.json couldn't be found!
+[10:15:53] [Render thread/INFO] (Minecraft) [STDERR]: 	at knot//mchorse.bbs_mod.resources.AssetProvider.getAsset(AssetProvider.java:54)
+[10:15:53] [Render thread/INFO] (Minecraft) [STDERR]: 	at knot//mchorse.bbs_mod.l10n.L10n.reload(L10n.java:172)
+[10:15:53] [Render thread/INFO] (Minecraft) [STDERR]: 	at knot//mchorse.bbs_mod.l10n.L10n.reload(L10n.java:158)
+[10:15:53] [Render thread/INFO] (Minecraft) [STDERR]: 	at knot//elgatopro300.bbsfbx.BBSFbxAddon.registerL10n(BBSFbxAddon.java:41)
+[10:15:53] [Render thread/INFO] (Minecraft) [STDERR]: 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+[10:15:53] [Render thread/INFO] (Minecraft) [STDERR]: 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+[10:15:53] [Render thread/INFO] (Minecraft) [STDERR]: 	at knot//mchorse.bbs_mod.events.EventBus.post(EventBus.java:54)
+[10:15:53] [Render thread/INFO] (Minecraft) [STDERR]: 	at knot//mchorse.bbs_mod.BBSModClient.onInitializeClient(BBSModClient.java:441)
+[10:15:53] [Render thread/INFO] (Minecraft) [STDERR]: 	at net.fabricmc.loader.impl.FabricLoaderImpl.invokeEntrypoints(FabricLoaderImpl.java:399)
+[10:15:53] [Render thread/INFO] (Minecraft) [STDERR]: 	at net.fabricmc.loader.impl.game.minecraft.Hooks.startClient(Hooks.java:53)
+[10:15:53] [Render thread/INFO] (Minecraft) [STDERR]: 	at knot//net.minecraft.client.MinecraftClient.<init>(MinecraftClient.java:487)
+[10:15:53] [Render thread/INFO] (Minecraft) [STDERR]: 	at knot//net.minecraft.client.main.Main.main(Main.java:223)
+[10:15:53] [Render thread/INFO] (Minecraft) [STDERR]: 	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:480)
+[10:15:53] [Render thread/INFO] (Minecraft) [STDERR]: 	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:74)
+[10:15:53] [Render thread/INFO] (Minecraft) [STDERR]: 	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23)
+[10:15:53] [Render thread/INFO] (Minecraft) [STDERR]: 	at net.fabricmc.devlaunchinjector.Main.main(Main.java:86)
+[10:15:53] [Render thread/INFO] (Minecraft) [STDERR]: Failed to load bbs_fbx:lang/en_us.json language file!
+[10:15:53] [Render thread/INFO] (Minecraft) [STDERR]: java.io.FileNotFoundException: Asset bbs_fbx:lang/en_us.json couldn't be found!
+[10:15:53] [Render thread/INFO] (Minecraft) [STDERR]: 	at knot//mchorse.bbs_mod.resources.AssetProvider.getAsset(AssetProvider.java:54)
+[10:15:53] [Render thread/INFO] (Minecraft) [STDERR]: 	at knot//mchorse.bbs_mod.l10n.L10n.reload(L10n.java:172)
+[10:15:53] [Render thread/INFO] (Minecraft) [STDERR]: 	at knot//mchorse.bbs_mod.l10n.L10n.reload(L10n.java:158)
+[10:15:53] [Render thread/INFO] (Minecraft) [STDERR]: 	at knot//elgatopro300.bbsfbx.BBSFbxAddon.registerL10n(BBSFbxAddon.java:41)
+[10:15:53] [Render thread/INFO] (Minecraft) [STDERR]: 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+[10:15:53] [Render thread/INFO] (Minecraft) [STDERR]: 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+[10:15:53] [Render thread/INFO] (Minecraft) [STDERR]: 	at knot//mchorse.bbs_mod.events.EventBus.post(EventBus.java:54)
+[10:15:53] [Render thread/INFO] (Minecraft) [STDERR]: 	at knot//mchorse.bbs_mod.BBSModClient.onInitializeClient(BBSModClient.java:441)
+[10:15:53] [Render thread/INFO] (Minecraft) [STDERR]: 	at net.fabricmc.loader.impl.FabricLoaderImpl.invokeEntrypoints(FabricLoaderImpl.java:399)
+[10:15:53] [Render thread/INFO] (Minecraft) [STDERR]: 	at net.fabricmc.loader.impl.game.minecraft.Hooks.startClient(Hooks.java:53)
+[10:15:53] [Render thread/INFO] (Minecraft) [STDERR]: 	at knot//net.minecraft.client.MinecraftClient.<init>(MinecraftClient.java:487)
+[10:15:53] [Render thread/INFO] (Minecraft) [STDERR]: 	at knot//net.minecraft.client.main.Main.main(Main.java:223)
+[10:15:53] [Render thread/INFO] (Minecraft) [STDERR]: 	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:480)
+[10:15:53] [Render thread/INFO] (Minecraft) [STDERR]: 	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:74)
+[10:15:53] [Render thread/INFO] (Minecraft) [STDERR]: 	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23)
+[10:15:53] [Render thread/INFO] (Minecraft) [STDERR]: 	at net.fabricmc.devlaunchinjector.Main.main(Main.java:86)
+[10:15:53] [Render thread/INFO] (BBS Fbx Addon) FBX model loader (CML target) registered
+[10:15:53] [Render thread/INFO] (Minecraft) [STDERR]: java.io.FileNotFoundException: /home/glaxium/Documents/BBS_FBX_Addon_CML/run/config/bbs/settings/categories.json (No such file or directory)
+[10:15:53] [Render thread/INFO] (Minecraft) [STDERR]: 	at java.base/java.io.FileInputStream.open0(Native Method)
+[10:15:53] [Render thread/INFO] (Minecraft) [STDERR]: 	at java.base/java.io.FileInputStream.open(FileInputStream.java:213)
+[10:15:53] [Render thread/INFO] (Minecraft) [STDERR]: 	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:152)
+[10:15:53] [Render thread/INFO] (Minecraft) [STDERR]: 	at knot//mchorse.bbs_mod.utils.IOUtils.readText(IOUtils.java:27)
+[10:15:53] [Render thread/INFO] (Minecraft) [STDERR]: 	at knot//mchorse.bbs_mod.data.DataToString.read(DataToString.java:184)
+[10:15:53] [Render thread/INFO] (Minecraft) [STDERR]: 	at knot//mchorse.bbs_mod.forms.VisibilityManager.read(VisibilityManager.java:54)
+[10:15:53] [Render thread/INFO] (Minecraft) [STDERR]: 	at knot//mchorse.bbs_mod.forms.FormCategories.setup(FormCategories.java:45)
+[10:15:53] [Render thread/INFO] (Minecraft) [STDERR]: 	at knot//mchorse.bbs_mod.BBSResources.init(BBSResources.java:17)
+[10:15:53] [Render thread/INFO] (Minecraft) [STDERR]: 	at knot//mchorse.bbs_mod.BBSModClient.onInitializeClient(BBSModClient.java:474)
+[10:15:53] [Render thread/INFO] (Minecraft) [STDERR]: 	at net.fabricmc.loader.impl.FabricLoaderImpl.invokeEntrypoints(FabricLoaderImpl.java:399)
+[10:15:53] [Render thread/INFO] (Minecraft) [STDERR]: 	at net.fabricmc.loader.impl.game.minecraft.Hooks.startClient(Hooks.java:53)
+[10:15:53] [Render thread/INFO] (Minecraft) [STDERR]: 	at knot//net.minecraft.client.MinecraftClient.<init>(MinecraftClient.java:487)
+[10:15:53] [Render thread/INFO] (Minecraft) [STDERR]: 	at knot//net.minecraft.client.main.Main.main(Main.java:223)
+[10:15:53] [Render thread/INFO] (Minecraft) [STDERR]: 	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:480)
+[10:15:53] [Render thread/INFO] (Minecraft) [STDERR]: 	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:74)
+[10:15:53] [Render thread/INFO] (Minecraft) [STDERR]: 	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23)
+[10:15:53] [Render thread/INFO] (Minecraft) [STDERR]: 	at net.fabricmc.devlaunchinjector.Main.main(Main.java:86)
+[10:15:53] [Render thread/INFO] (Indigo) [Indigo] Registering Indigo renderer!
+[10:15:53] [Render thread/INFO] (Minecraft) Backend library: LWJGL version 3.3.2-snapshot
+[10:15:53] [Render thread/INFO] (Minecraft) [STDERR]: [LWJGL] [ThreadLocalUtil] Unsupported JNI version detected, this may result in a crash. Please inform LWJGL developers.
+[10:15:54] [Download-2/ERROR] (Minecraft) Failed to fetch user properties
+com.mojang.authlib.exceptions.InvalidCredentialsException: Status: 401
+	at com.mojang.authlib.exceptions.MinecraftClientHttpException.toAuthenticationException(MinecraftClientHttpException.java:59) ~[authlib-6.0.52.jar:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilUserApiService.fetchProperties(YggdrasilUserApiService.java:150) ~[authlib-6.0.52.jar:?]
+	at net.minecraft.client.MinecraftClient.method_55608(MinecraftClient.java:467) ~[minecraft-merged-ef7e86142d-1.20.4-net.fabricmc.yarn.1_20_4.1.20.4+build.1-v2.jar:?]
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768) ~[?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+	at java.lang.Thread.run(Thread.java:1583) ~[?:?]
+Caused by: com.mojang.authlib.exceptions.MinecraftClientHttpException: Status: 401
+	at com.mojang.authlib.minecraft.client.MinecraftClient.readInputStream(MinecraftClient.java:100) ~[authlib-6.0.52.jar:?]
+	at com.mojang.authlib.minecraft.client.MinecraftClient.get(MinecraftClient.java:57) ~[authlib-6.0.52.jar:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilUserApiService.fetchProperties(YggdrasilUserApiService.java:121) ~[authlib-6.0.52.jar:?]
+	... 5 more
+[10:15:54] [Render thread/INFO] (Minecraft) Reloading ResourceManager: vanilla, fabric (fabric-game-rule-api-v1, fabric-block-view-api-v2, fabric-transitive-access-wideners-v1, fabric-command-api-v1, fabric-rendering-data-attachment-v1, fabric-blockrenderlayer-v1, fabric-mining-level-api-v1, fabric-dimensions-v1, fabric-recipe-api-v1, fabric-client-tags-api-v1, fabric-screen-api-v1, fabric-loot-api-v2, fabric-renderer-registries-v1, fabric-object-builder-api-v1, fabric-content-registries-v0, fabric-block-api-v1, fabric-item-api-v1, fabric-convention-tags-v1, fabric-lifecycle-events-v1, fabric-transfer-api-v1, fabric-gametest-api-v1, fabric-api, fabric-biome-api-v1, fabric-networking-api-v1, fabric-screen-handler-api-v1, fabric-events-lifecycle-v0, fabric-particles-v1, fabric-keybindings-v0, fabric-rendering-fluids-v1, fabric-command-api-v2, fabric-models-v0, fabric-api-base, bbs, fabric-events-interaction-v0, fabric-containers-v0, fabric-commands-v0, fabricloader, fabric-renderer-api-v1, fabric-crash-report-info-v1, fabric-key-binding-api-v1, fabric-sound-api-v1, fabric-model-loading-api-v1, fabric-rendering-v0, fabric-entity-events-v1, fabric-registry-sync-v0, fabric-message-api-v1, fabric-resource-conditions-api-v1, fabric-data-generation-api-v1, fabric-renderer-indigo, fabric-item-group-api-v1, bbs-fbx-addon, fabric-api-lookup-api-v1, fabric-rendering-v1, fabric-resource-loader-v0)
+[10:15:54] [Worker-Main-6/INFO] (Minecraft) Found unifont_all_no_pua-15.1.04.hex, loading
+[10:15:55] [Render thread/INFO] (Minecraft) [STDOUT]: Loading language file "assets:strings/en_us.json".
+[10:15:55] [Render thread/INFO] (Minecraft) [STDERR]: Failed to load bbs_fbx:lang/en_us.json language file!
+[10:15:55] [Render thread/INFO] (Minecraft) [STDERR]: java.io.FileNotFoundException: Asset bbs_fbx:lang/en_us.json couldn't be found!
+[10:15:55] [Render thread/INFO] (Minecraft) [STDERR]: 	at knot//mchorse.bbs_mod.resources.AssetProvider.getAsset(AssetProvider.java:54)
+[10:15:55] [Render thread/INFO] (Minecraft) [STDERR]: 	at knot//mchorse.bbs_mod.l10n.L10n.reload(L10n.java:172)
+[10:15:55] [Render thread/INFO] (Minecraft) [STDERR]: 	at knot//mchorse.bbs_mod.BBSModClient.reloadLanguage(BBSModClient.java:1010)
+[10:15:55] [Render thread/INFO] (Minecraft) [STDERR]: 	at knot//net.minecraft.client.resource.language.LanguageManager.handler$zhf000$bbs$onReload(LanguageManager.java:518)
+[10:15:55] [Render thread/INFO] (Minecraft) [STDERR]: 	at knot//net.minecraft.client.resource.language.LanguageManager.reload(LanguageManager.java:71)
+[10:15:55] [Render thread/INFO] (Minecraft) [STDERR]: 	at knot//net.minecraft.resource.SynchronousResourceReloader.method_29490(SynchronousResourceReloader.java:15)
+[10:15:55] [Render thread/INFO] (Minecraft) [STDERR]: 	at java.base/java.util.concurrent.CompletableFuture$UniRun.tryFire(CompletableFuture.java:787)
+[10:15:55] [Render thread/INFO] (Minecraft) [STDERR]: 	at java.base/java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:482)
+[10:15:55] [Render thread/INFO] (Minecraft) [STDERR]: 	at knot//net.minecraft.resource.SimpleResourceReload.method_18365(SimpleResourceReload.java:69)
+[10:15:55] [Render thread/INFO] (Minecraft) [STDERR]: 	at knot//net.minecraft.util.thread.ThreadExecutor.executeTask(ThreadExecutor.java:156)
+[10:15:55] [Render thread/INFO] (Minecraft) [STDERR]: 	at knot//net.minecraft.util.thread.ReentrantThreadExecutor.executeTask(ReentrantThreadExecutor.java:23)
+[10:15:55] [Render thread/INFO] (Minecraft) [STDERR]: 	at knot//net.minecraft.util.thread.ThreadExecutor.runTask(ThreadExecutor.java:130)
+[10:15:55] [Render thread/INFO] (Minecraft) [STDERR]: 	at knot//net.minecraft.util.thread.ThreadExecutor.runTasks(ThreadExecutor.java:115)
+[10:15:55] [Render thread/INFO] (Minecraft) [STDERR]: 	at knot//net.minecraft.client.MinecraftClient.render(MinecraftClient.java:1283)
+[10:15:55] [Render thread/INFO] (Minecraft) [STDERR]: 	at knot//net.minecraft.client.MinecraftClient.run(MinecraftClient.java:888)
+[10:15:55] [Render thread/INFO] (Minecraft) [STDERR]: 	at knot//net.minecraft.client.main.Main.main(Main.java:265)
+[10:15:55] [Render thread/INFO] (Minecraft) [STDERR]: 	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:480)
+[10:15:55] [Render thread/INFO] (Minecraft) [STDERR]: 	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:74)
+[10:15:55] [Render thread/INFO] (Minecraft) [STDERR]: 	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23)
+[10:15:55] [Render thread/INFO] (Minecraft) [STDERR]: 	at net.fabricmc.devlaunchinjector.Main.main(Main.java:86)
+[10:15:55] [Render thread/INFO] (Minecraft) [STDERR]: Failed to load bbs_fbx:lang/en_us.json language file!
+[10:15:55] [Render thread/INFO] (Minecraft) [STDERR]: java.io.FileNotFoundException: Asset bbs_fbx:lang/en_us.json couldn't be found!
+[10:15:55] [Render thread/INFO] (Minecraft) [STDERR]: 	at knot//mchorse.bbs_mod.resources.AssetProvider.getAsset(AssetProvider.java:54)
+[10:15:55] [Render thread/INFO] (Minecraft) [STDERR]: 	at knot//mchorse.bbs_mod.l10n.L10n.reload(L10n.java:172)
+[10:15:55] [Render thread/INFO] (Minecraft) [STDERR]: 	at knot//mchorse.bbs_mod.BBSModClient.reloadLanguage(BBSModClient.java:1010)
+[10:15:55] [Render thread/INFO] (Minecraft) [STDERR]: 	at knot//net.minecraft.client.resource.language.LanguageManager.handler$zhf000$bbs$onReload(LanguageManager.java:518)
+[10:15:55] [Render thread/INFO] (Minecraft) [STDERR]: 	at knot//net.minecraft.client.resource.language.LanguageManager.reload(LanguageManager.java:71)
+[10:15:55] [Render thread/INFO] (Minecraft) [STDERR]: 	at knot//net.minecraft.resource.SynchronousResourceReloader.method_29490(SynchronousResourceReloader.java:15)
+[10:15:55] [Render thread/INFO] (Minecraft) [STDERR]: 	at java.base/java.util.concurrent.CompletableFuture$UniRun.tryFire(CompletableFuture.java:787)
+[10:15:55] [Render thread/INFO] (Minecraft) [STDERR]: 	at java.base/java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:482)
+[10:15:55] [Render thread/INFO] (Minecraft) [STDERR]: 	at knot//net.minecraft.resource.SimpleResourceReload.method_18365(SimpleResourceReload.java:69)
+[10:15:55] [Render thread/INFO] (Minecraft) [STDERR]: 	at knot//net.minecraft.util.thread.ThreadExecutor.executeTask(ThreadExecutor.java:156)
+[10:15:55] [Render thread/INFO] (Minecraft) [STDERR]: 	at knot//net.minecraft.util.thread.ReentrantThreadExecutor.executeTask(ReentrantThreadExecutor.java:23)
+[10:15:55] [Render thread/INFO] (Minecraft) [STDERR]: 	at knot//net.minecraft.util.thread.ThreadExecutor.runTask(ThreadExecutor.java:130)
+[10:15:55] [Render thread/INFO] (Minecraft) [STDERR]: 	at knot//net.minecraft.util.thread.ThreadExecutor.runTasks(ThreadExecutor.java:115)
+[10:15:55] [Render thread/INFO] (Minecraft) [STDERR]: 	at knot//net.minecraft.client.MinecraftClient.render(MinecraftClient.java:1283)
+[10:15:55] [Render thread/INFO] (Minecraft) [STDERR]: 	at knot//net.minecraft.client.MinecraftClient.run(MinecraftClient.java:888)
+[10:15:55] [Render thread/INFO] (Minecraft) [STDERR]: 	at knot//net.minecraft.client.main.Main.main(Main.java:265)
+[10:15:55] [Render thread/INFO] (Minecraft) [STDERR]: 	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:480)
+[10:15:55] [Render thread/INFO] (Minecraft) [STDERR]: 	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:74)
+[10:15:55] [Render thread/INFO] (Minecraft) [STDERR]: 	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23)
+[10:15:55] [Render thread/INFO] (Minecraft) [STDERR]: 	at net.fabricmc.devlaunchinjector.Main.main(Main.java:86)
+[10:15:55] [Render thread/WARN] (Minecraft) Missing sound for event: minecraft:item.goat_horn.play
+[10:15:55] [Render thread/WARN] (Minecraft) Missing sound for event: minecraft:entity.goat.screaming.horn_break
+[10:15:55] [Render thread/WARN] (Minecraft) Missing sound for event: minecraft:entity.generic.wind_burst
+[10:15:55] [Render thread/INFO] (Minecraft) OpenAL initialized on device Redragon Gaming Headset Analog Stereo
+[10:15:55] [Render thread/INFO] (Minecraft) Sound engine started
+[10:15:55] [Render thread/INFO] (Minecraft) Created: 1024x512x4 minecraft:textures/atlas/blocks.png-atlas
+[10:15:55] [Render thread/INFO] (Minecraft) Created: 256x256x4 minecraft:textures/atlas/signs.png-atlas
+[10:15:55] [Render thread/INFO] (Minecraft) Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
+[10:15:55] [Render thread/INFO] (Minecraft) Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
+[10:15:55] [Render thread/INFO] (Minecraft) Created: 1024x1024x4 minecraft:textures/atlas/armor_trims.png-atlas
+[10:15:55] [Render thread/INFO] (Minecraft) Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
+[10:15:55] [Render thread/INFO] (Minecraft) Created: 128x64x4 minecraft:textures/atlas/decorated_pot.png-atlas
+[10:15:55] [Render thread/INFO] (Minecraft) Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
+[10:15:55] [Render thread/INFO] (Minecraft) Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
+[10:15:55] [Render thread/WARN] (Minecraft) Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.
+[10:15:55] [Render thread/INFO] (Minecraft) Created: 512x256x0 minecraft:textures/atlas/particles.png-atlas
+[10:15:55] [Render thread/INFO] (Minecraft) Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
+[10:15:55] [Render thread/INFO] (Minecraft) Created: 128x128x0 minecraft:textures/atlas/mob_effects.png-atlas
+[10:15:55] [Render thread/INFO] (Minecraft) Created: 1024x512x0 minecraft:textures/atlas/gui.png-atlas
+[10:15:56] [IO-Worker-1/INFO] (Minecraft) Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: FabricMC
+[10:15:56] [IO-Worker-1/ERROR] (Minecraft) Couldn't connect to realms
+net.minecraft.client.realms.exception.RealmsServiceException: Realms authentication error with message 'java.lang.RuntimeException: Failed to parse into SignedJWT: FabricMC'
+	at net.minecraft.client.realms.RealmsClient.execute(RealmsClient.java:447) ~[minecraft-merged-ef7e86142d-1.20.4-net.fabricmc.yarn.1_20_4.1.20.4+build.1-v2.jar:?]
+	at net.minecraft.client.realms.RealmsClient.clientCompatible(RealmsClient.java:232) ~[minecraft-merged-ef7e86142d-1.20.4-net.fabricmc.yarn.1_20_4.1.20.4+build.1-v2.jar:?]
+	at net.minecraft.client.realms.RealmsAvailability.method_52627(RealmsAvailability.java:45) ~[minecraft-merged-ef7e86142d-1.20.4-net.fabricmc.yarn.1_20_4.1.20.4+build.1-v2.jar:?]
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768) ~[?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+	at java.lang.Thread.run(Thread.java:1583) ~[?:?]
+[10:15:59] [Render thread/INFO] (Minecraft) Loaded 7 recipes
+[10:15:59] [Render thread/INFO] (Minecraft) Loaded 1271 advancements
+[10:15:59] [Render thread/INFO] (BiomeModificationImpl) Applied 0 biome modifications to 0 of 64 new biomes in 644.1 μs
+[10:15:59] [Server thread/INFO] (Minecraft) Starting integrated minecraft server version 1.20.4
+[10:15:59] [Server thread/INFO] (Minecraft) Generating keypair
+[10:16:00] [Server thread/INFO] (Minecraft) Preparing start region for dimension minecraft:overworld
+[10:16:01] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[10:16:01] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[10:16:01] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[10:16:01] [Render thread/INFO] (Minecraft) Preparing spawn area: 1%
+[10:16:02] [Render thread/INFO] (Minecraft) Time elapsed: 1949 ms
+[10:16:02] [Server thread/INFO] (Minecraft) Changing view distance to 12, from 10
+[10:16:02] [Server thread/INFO] (Minecraft) Changing simulation distance to 12, from 0
+[10:16:02] [Server thread/INFO] (Minecraft) Player952[local:E:080a433b] logged in with entity id 194 at (101.62295327921406, 71.0, -7.4526826968905695)
+[10:16:02] [Server thread/INFO] (Minecraft) Player952 joined the game
+[10:16:02] [Render thread/INFO] (Minecraft) Loaded 2 advancements
+[10:16:02] [Render thread/INFO] (Minecraft) [STDOUT]: Texture "assets:textures/model_block.png" was loaded!
+[10:16:03] [BBS model loader/INFO] (Minecraft) [STDOUT]: [FBXMetadata] Found metadata properties: 18
+[10:16:03] [BBS model loader/INFO] (Minecraft) [STDOUT]:  -> UpAxis: 1
+[10:16:03] [BBS model loader/INFO] (Minecraft) [STDOUT]:  -> FrontAxis: 2
+[10:16:03] [BBS model loader/INFO] (Minecraft) [STDOUT]:  -> CoordAxis: 0
+[10:16:03] [BBS model loader/INFO] (Minecraft) [STDOUT]:  -> OriginalUpAxis: -1
+[10:16:03] [BBS model loader/INFO] (Minecraft) [STDOUT]:  -> UnitScaleFactor: 0.0
+[10:16:03] [BBS model loader/INFO] (Minecraft) [STDOUT]: Model "miku shape key" was loaded!
+[10:16:03] [BBS model loader/INFO] (Minecraft) [STDOUT]: [FBXMetadata] Found metadata properties: 18
+[10:16:03] [BBS model loader/INFO] (Minecraft) [STDOUT]:  -> UpAxis: 1
+[10:16:03] [BBS model loader/INFO] (Minecraft) [STDOUT]:  -> FrontAxis: 2
+[10:16:03] [BBS model loader/INFO] (Minecraft) [STDOUT]:  -> CoordAxis: 0
+[10:16:03] [BBS model loader/INFO] (Minecraft) [STDOUT]:  -> OriginalUpAxis: -1
+[10:16:03] [BBS model loader/INFO] (Minecraft) [STDOUT]:  -> UnitScaleFactor: 0.0
+[10:16:03] [BBS model loader/INFO] (Minecraft) [STDOUT]: Model "wall2" was loaded!
+[10:16:03] [Render thread/INFO] (Minecraft) [STDOUT]: Texture "assets:models/miku shape key/textures/Miku/default.png" was loaded!
+[10:16:03] [Render thread/INFO] (Minecraft) [STDOUT]: Texture "assets:models/wall2/textures/M_Wall/default.png" was loaded!
+[10:16:04] [Render thread/WARN] (Minecraft) Shader picker_billboard could not find sampler named Sampler2 in the specified shader program.
+[10:16:04] [Render thread/WARN] (Minecraft) Shader picker_billboard could not find uniform named IViewRotMat in the specified shader program.
+[10:16:04] [Render thread/WARN] (Minecraft) Shader picker_billboard_no_shading could not find sampler named Sampler2 in the specified shader program.
+[10:16:04] [Render thread/WARN] (Minecraft) Shader picker_billboard_no_shading could not find uniform named IViewRotMat in the specified shader program.
+[10:16:04] [Render thread/WARN] (Minecraft) Shader picker_particles could not find uniform named ColorModulator in the specified shader program.
+[10:16:04] [Render thread/WARN] (Minecraft) Shader picker_models could not find sampler named Sampler2 in the specified shader program.
+[10:16:04] [Render thread/WARN] (Minecraft) Shader picker_models could not find uniform named IViewRotMat in the specified shader program.
+[10:16:04] [Render thread/INFO] (Minecraft) [STDOUT]: Texture "assets:models/miku shape key/textures/Hair/default.png" was loaded!
+[10:16:04] [BBS model loader/INFO] (Minecraft) [STDOUT]: [FBXMetadata] Found metadata properties: 18
+[10:16:04] [BBS model loader/INFO] (Minecraft) [STDOUT]:  -> UpAxis: 1
+[10:16:04] [BBS model loader/INFO] (Minecraft) [STDOUT]:  -> FrontAxis: 2
+[10:16:04] [BBS model loader/INFO] (Minecraft) [STDOUT]:  -> CoordAxis: 0
+[10:16:04] [BBS model loader/INFO] (Minecraft) [STDOUT]:  -> OriginalUpAxis: 2
+[10:16:04] [BBS model loader/INFO] (Minecraft) [STDOUT]:  -> UnitScaleFactor: 0.0
+[10:16:04] [BBS model loader/INFO] (Minecraft) [STDOUT]: Model "car" was loaded!
+[10:16:04] [Render thread/INFO] (Minecraft) [STDOUT]: Texture "assets:models/car/textures/caliper/default.png" was loaded!
+[10:16:04] [Render thread/INFO] (Minecraft) [STDOUT]: Texture "assets:models/car/textures/window/default.png" was loaded!
+[10:16:04] [Render thread/INFO] (Minecraft) [STDOUT]: Texture "assets:models/car/textures/glass/default.png" was loaded!
+[10:16:04] [Render thread/INFO] (Minecraft) [STDOUT]: Texture "assets:models/car/textures/badge/default.png" was loaded!
+[10:16:04] [Render thread/INFO] (Minecraft) [STDOUT]: Texture "assets:models/car/textures/black/default.png" was loaded!
+[10:16:04] [Render thread/INFO] (Minecraft) [STDOUT]: Texture "assets:models/car/textures/body/default.png" was loaded!
+[10:16:04] [Render thread/INFO] (Minecraft) [STDOUT]: Texture "assets:models/car/textures/body_2/default.png" was loaded!
+[10:16:04] [Render thread/INFO] (Minecraft) [STDOUT]: Texture "assets:models/car/textures/bottom/default.png" was loaded!
+[10:16:04] [Render thread/INFO] (Minecraft) [STDOUT]: Texture "assets:models/car/textures/chrome/default.png" was loaded!
+[10:16:04] [Render thread/INFO] (Minecraft) [STDOUT]: Texture "assets:models/car/textures/detail_glass_amber/default.png" was loaded!
+[10:16:04] [Render thread/INFO] (Minecraft) [STDOUT]: Texture "assets:models/car/textures/detail_glass_clear/default.png" was loaded!
+[10:16:04] [Render thread/INFO] (Minecraft) [STDOUT]: Texture "assets:models/car/textures/emblem/default.png" was loaded!
+[10:16:04] [Render thread/INFO] (Minecraft) [STDOUT]: Texture "assets:models/car/textures/frame/default.png" was loaded!
+[10:16:04] [Render thread/INFO] (Minecraft) [STDOUT]: Texture "assets:models/car/textures/grille1_alpha/default.png" was loaded!
+[10:16:04] [Render thread/INFO] (Minecraft) [STDOUT]: Texture "assets:models/car/textures/grille2_alpha/default.png" was loaded!
+[10:16:04] [Render thread/INFO] (Minecraft) [STDOUT]: Texture "assets:models/car/textures/lights_glass/default.png" was loaded!
+[10:16:04] [Render thread/INFO] (Minecraft) [STDOUT]: Texture "assets:models/car/textures/reflector/default.png" was loaded!
+[10:16:04] [Render thread/INFO] (Minecraft) [STDOUT]: Texture "assets:models/car/textures/rubber_trim/default.png" was loaded!
+[10:16:04] [Render thread/INFO] (Minecraft) [STDOUT]: Texture "assets:models/car/textures/matte_colors/default.png" was loaded!
+[10:16:04] [Render thread/INFO] (Minecraft) [STDOUT]: Texture "assets:models/car/textures/mirrorLeft/default.png" was loaded!
+[10:16:04] [Render thread/INFO] (Minecraft) [STDOUT]: Texture "assets:models/car/textures/grille2/default.png" was loaded!
+[10:16:04] [Render thread/INFO] (Minecraft) [STDOUT]: Texture "assets:models/car/textures/misc/default.png" was loaded!
+[10:16:04] [Render thread/INFO] (Minecraft) [STDOUT]: Texture "assets:models/car/textures/chrome_2/default.png" was loaded!
+[10:16:04] [Render thread/INFO] (Minecraft) [STDOUT]: Texture "assets:models/car/textures/detail_glass_red/default.png" was loaded!
+[10:16:04] [Render thread/INFO] (Minecraft) [STDOUT]: Texture "assets:models/car/textures/head_light/default.png" was loaded!
+[10:16:04] [Render thread/INFO] (Minecraft) [STDOUT]: Texture "assets:models/car/textures/tail_light_lod0/default.png" was loaded!
+[10:16:04] [Render thread/INFO] (Minecraft) [STDOUT]: Texture "assets:models/car/textures/undercarriage/default.png" was loaded!
+[10:16:04] [Render thread/INFO] (Minecraft) [STDOUT]: Texture "assets:models/car/textures/brake/default.png" was loaded!
+[10:16:04] [Render thread/INFO] (Minecraft) [STDOUT]: Texture "assets:models/car/textures/hub/default.png" was loaded!
+[10:16:04] [Render thread/INFO] (Minecraft) [STDOUT]: Texture "assets:models/car/textures/badge_cp/default.png" was loaded!
+[10:16:04] [Render thread/INFO] (Minecraft) [STDOUT]: Texture "assets:models/car/textures/bump_leather/default.png" was loaded!
+[10:16:04] [Render thread/INFO] (Minecraft) [STDOUT]: Texture "assets:models/car/textures/bump_plastic/default.png" was loaded!
+[10:16:04] [Render thread/INFO] (Minecraft) [STDOUT]: Texture "assets:models/car/textures/gauge_emissive/default.png" was loaded!
+[10:16:04] [Render thread/INFO] (Minecraft) [STDOUT]: Texture "assets:models/car/textures/gauge_needle/default.png" was loaded!
+[10:16:04] [Render thread/INFO] (Minecraft) [STDOUT]: Texture "assets:models/car/textures/leather/default.png" was loaded!
+[10:16:04] [Render thread/INFO] (Minecraft) [STDOUT]: Texture "assets:models/car/textures/metal/default.png" was loaded!
+[10:16:04] [Render thread/INFO] (Minecraft) [STDOUT]: Texture "assets:models/car/textures/mirrorMiddle/default.png" was loaded!
+[10:16:04] [Render thread/INFO] (Minecraft) [STDOUT]: Texture "assets:models/car/textures/mottled/default.png" was loaded!
+[10:16:04] [Render thread/INFO] (Minecraft) [STDOUT]: Texture "assets:models/car/textures/plastic/default.png" was loaded!
+[10:16:04] [Render thread/INFO] (Minecraft) [STDOUT]: Texture "assets:models/car/textures/rubber/default.png" was loaded!
+[10:16:04] [Render thread/INFO] (Minecraft) [STDOUT]: Texture "assets:models/car/textures/solid/default.png" was loaded!
+[10:16:04] [Render thread/INFO] (Minecraft) [STDOUT]: Texture "assets:models/car/textures/stitching/default.png" was loaded!
+[10:16:04] [Render thread/INFO] (Minecraft) [STDOUT]: Texture "assets:models/car/textures/bump_stitching/default.png" was loaded!
+[10:16:04] [Render thread/INFO] (Minecraft) [STDOUT]: Texture "assets:models/car/textures/Material #24/default.png" was loaded!
+[10:16:04] [Render thread/INFO] (Minecraft) [STDOUT]: Texture "assets:models/car/textures/Material #25/default.png" was loaded!
+[10:16:04] [Render thread/INFO] (Minecraft) [STDOUT]: Texture "assets:models/car/textures/rim/default.png" was loaded!
+[10:16:04] [Render thread/INFO] (Minecraft) [STDOUT]: Texture "assets:models/car/textures/outer_rim/default.png" was loaded!
+[10:16:04] [Render thread/INFO] (Minecraft) [STDOUT]: Texture "assets:models/car/textures/inner_rim/default.png" was loaded!
+[10:16:04] [Render thread/INFO] (Minecraft) [STDOUT]: Texture "assets:models/car/textures/wheel_black/default.png" was loaded!
+[10:16:05] [Thread-15/INFO] (Minecraft) OpenGL debug message: id=1281, source=API, type=ERROR, severity=HIGH, message='GL_INVALID_VALUE error generated. width, height or depth values are negative.'
+[10:16:05] [Thread-15/INFO] (Minecraft) OpenGL debug message: id=1281, source=API, type=ERROR, severity=HIGH, message='GL_INVALID_VALUE error generated.'
+[10:16:05] [Thread-15/INFO] (Minecraft) OpenGL debug message: id=1281, source=API, type=ERROR, severity=HIGH, message='GL_INVALID_VALUE error generated. width, height or depth values are negative.'
+[10:16:05] [Thread-15/INFO] (Minecraft) OpenGL debug message: id=1281, source=API, type=ERROR, severity=HIGH, message='GL_INVALID_VALUE error generated.'
+[10:16:05] [Thread-15/INFO] (Minecraft) OpenGL debug message: id=1281, source=API, type=ERROR, severity=HIGH, message='GL_INVALID_VALUE error generated. width, height or depth values are negative.'
+[10:16:05] [Thread-15/INFO] (Minecraft) OpenGL debug message: id=1281, source=API, type=ERROR, severity=HIGH, message='GL_INVALID_VALUE error generated.'
+[10:16:05] [Thread-15/INFO] (Minecraft) OpenGL debug message: id=1281, source=API, type=ERROR, severity=HIGH, message='GL_INVALID_VALUE error generated. width, height or depth values are negative.'
+[10:16:05] [Thread-15/INFO] (Minecraft) OpenGL debug message: id=1281, source=API, type=ERROR, severity=HIGH, message='GL_INVALID_VALUE error generated.'
+[10:16:05] [Thread-15/INFO] (Minecraft) OpenGL debug message: id=1281, source=API, type=ERROR, severity=HIGH, message='GL_INVALID_VALUE error generated. width, height or depth values are negative.'
+[10:16:05] [Thread-15/INFO] (Minecraft) OpenGL debug message: id=1281, source=API, type=ERROR, severity=HIGH, message='GL_INVALID_VALUE error generated.'
+[10:16:05] [Thread-15/INFO] (Minecraft) OpenGL debug message: id=1281, source=API, type=ERROR, severity=HIGH, message='GL_INVALID_VALUE error generated. width, height or depth values are negative.'
+[10:16:05] [Thread-15/INFO] (Minecraft) OpenGL debug message: id=1281, source=API, type=ERROR, severity=HIGH, message='GL_INVALID_VALUE error generated.'
+[10:16:05] [Render thread/INFO] (Minecraft) [STDOUT]: Texture "mod_icons:bbs_fbx/icon.png" was loaded!
+[10:16:06] [Render thread/INFO] (Minecraft) [STDOUT]: Texture "assets:textures/icons.png" was loaded!
+[10:16:11] [Server thread/INFO] (Minecraft) Saving and pausing game...
+[10:16:11] [Render thread/INFO] (Minecraft) [STDOUT]: Texture "assets:textures/banners/films/Home.png" was loaded!
+[10:16:11] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[10:16:11] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[10:16:11] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[10:16:18] [Render thread/INFO] (Minecraft) [STDOUT]: Texture "assets:textures/anchor.png" was loaded!
+[10:16:18] [Render thread/INFO] (Minecraft) [STDOUT]: Texture "assets:textures/error.png" was loaded!
+[10:16:18] [BBS model loader/INFO] (Minecraft) [STDOUT]: [FBXMetadata] Found metadata properties: 18
+[10:16:18] [BBS model loader/INFO] (Minecraft) [STDOUT]:  -> UpAxis: 1
+[10:16:18] [BBS model loader/INFO] (Minecraft) [STDOUT]:  -> FrontAxis: 2
+[10:16:18] [BBS model loader/INFO] (Minecraft) [STDOUT]:  -> CoordAxis: 0
+[10:16:18] [BBS model loader/INFO] (Minecraft) [STDOUT]:  -> OriginalUpAxis: -1
+[10:16:18] [BBS model loader/INFO] (Minecraft) [STDOUT]:  -> UnitScaleFactor: 0.0
+[10:16:19] [BBS model loader/INFO] (Minecraft) [STDOUT]: Model "cat robot" was loaded!
+[10:16:19] [BBS model loader/INFO] (Minecraft) [STDOUT]: [FBXMetadata] Found metadata properties: 18
+[10:16:19] [BBS model loader/INFO] (Minecraft) [STDOUT]:  -> UpAxis: 1
+[10:16:19] [BBS model loader/INFO] (Minecraft) [STDOUT]:  -> FrontAxis: 2
+[10:16:19] [BBS model loader/INFO] (Minecraft) [STDOUT]:  -> CoordAxis: 0
+[10:16:19] [BBS model loader/INFO] (Minecraft) [STDOUT]:  -> OriginalUpAxis: -1
+[10:16:19] [BBS model loader/INFO] (Minecraft) [STDOUT]:  -> UnitScaleFactor: 0.0
+[10:16:19] [Render thread/INFO] (Minecraft) [STDOUT]: Texture "assets:models/cat robot/textures/M_Body/default.png" was loaded!
+[10:16:19] [Render thread/INFO] (Minecraft) [STDOUT]: Texture "assets:models/cat robot/textures/M_Fur/default.png" was loaded!
+[10:16:19] [BBS model loader/INFO] (Minecraft) [STDOUT]: Model "miku" was loaded!
+[10:16:19] [BBS model loader/INFO] (Minecraft) [STDOUT]: [FBXMetadata] Found metadata properties: 18
+[10:16:19] [BBS model loader/INFO] (Minecraft) [STDOUT]:  -> UpAxis: 1
+[10:16:19] [BBS model loader/INFO] (Minecraft) [STDOUT]:  -> FrontAxis: 2
+[10:16:19] [BBS model loader/INFO] (Minecraft) [STDOUT]:  -> CoordAxis: 0
+[10:16:19] [BBS model loader/INFO] (Minecraft) [STDOUT]:  -> OriginalUpAxis: -1
+[10:16:19] [BBS model loader/INFO] (Minecraft) [STDOUT]:  -> UnitScaleFactor: 0.0
+[10:16:19] [Render thread/INFO] (Minecraft) [STDOUT]: Texture "assets:models/miku/textures/Miku/default.png" was loaded!
+[10:16:19] [BBS model loader/INFO] (Minecraft) [STDOUT]: Model "miku (copy)" was loaded!
+[10:16:19] [Render thread/INFO] (Minecraft) [STDOUT]: Texture "assets:models/miku (copy)/textures/Miku/default.png" was loaded!
+[10:16:19] [Render thread/INFO] (Minecraft) [STDOUT]: Texture "assets:models/miku/textures/Hair/default.png" was loaded!
+[10:16:19] [Render thread/INFO] (Minecraft) [STDOUT]: Texture "assets:models/miku (copy)/textures/Hair/default.png" was loaded!
+[10:16:19] [BBS model loader/INFO] (Minecraft) [STDOUT]: Model "emoticons/alex" was loaded!
+[10:16:19] [BBS model loader/INFO] (Minecraft) [STDOUT]: Model "emoticons/alex_simple" was loaded!
+[10:16:19] [BBS model loader/INFO] (Minecraft) [STDOUT]: Model "emoticons/steve" was loaded!
+[10:16:19] [BBS model loader/INFO] (Minecraft) [STDOUT]: Model "emoticons/steve_simple" was loaded!
+[10:16:19] [BBS model loader/INFO] (Minecraft) [STDOUT]: Model "player/alex" was loaded!
+[10:16:19] [Render thread/INFO] (Minecraft) [STDOUT]: Texture "assets:models/player/alex/alex.png" was loaded!
+[10:16:19] [Render thread/INFO] (Minecraft) [STDOUT]: Texture "assets:models/player/steve/steve.png" was loaded!
+[10:16:19] [BBS model loader/INFO] (Minecraft) [STDOUT]: Model "player/alex_3d" was loaded!
+[10:16:19] [BBS model loader/INFO] (Minecraft) [STDOUT]: Model "player/alex_bends" was loaded!
+[10:16:19] [Render thread/INFO] (Minecraft) [STDOUT]: Texture "assets:models/player/alex_3d/alex.png" was loaded!
+[10:16:19] [BBS model loader/INFO] (Minecraft) [STDOUT]: Model "player/alex_bends_3d" was loaded!
+[10:16:19] [Render thread/INFO] (Minecraft) [STDOUT]: Texture "assets:models/player/alex_bends/alex.png" was loaded!
+[10:16:19] [Render thread/INFO] (Minecraft) [STDOUT]: Texture "assets:models/player/alex_bends_3d/alex.png" was loaded!
+[10:16:20] [BBS model loader/INFO] (Minecraft) [STDOUT]: [FBXMetadata] Found metadata properties: 18
+[10:16:20] [BBS model loader/INFO] (Minecraft) [STDOUT]:  -> UpAxis: 1
+[10:16:20] [BBS model loader/INFO] (Minecraft) [STDOUT]:  -> FrontAxis: 2
+[10:16:20] [BBS model loader/INFO] (Minecraft) [STDOUT]:  -> CoordAxis: 0
+[10:16:20] [BBS model loader/INFO] (Minecraft) [STDOUT]:  -> OriginalUpAxis: -1
+[10:16:20] [BBS model loader/INFO] (Minecraft) [STDOUT]:  -> UnitScaleFactor: 0.0
+[10:16:20] [BBS model loader/INFO] (Minecraft) [STDOUT]: Model "shape key cube" was loaded!
+[10:16:20] [Render thread/INFO] (Minecraft) [STDOUT]: Texture "assets:models/shape key cube/textures/DefaultMaterial/default.png" was loaded!
+[10:18:02] [Server thread/INFO] (Minecraft) Saving and pausing game...
+[10:18:02] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[10:18:02] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[10:18:02] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[10:18:20] [Server thread/INFO] (Minecraft) Saving and pausing game...
+[10:18:20] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[10:18:20] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[10:18:20] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether

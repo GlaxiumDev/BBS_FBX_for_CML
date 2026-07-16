@@ -1,0 +1,19 @@
+{
+  "required": true,
+  "package": "elgatopro300.bbsfbx.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "client": [
+    "ModelManagerMixinCML",
+    "ImportersMixinCML",
+    "BOBJModelVAOMixinCML",
+    "ModelInstanceMixinCML",
+    "ModelFormMixinCML",
+    "FormRendererMixinCML",
+    "ModelFormRendererMixinCML",
+    "UIFormPanelMixinCML",
+    "UIModelFormPanelMixinCML"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
