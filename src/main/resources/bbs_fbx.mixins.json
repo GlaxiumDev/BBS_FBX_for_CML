@@ -6,12 +6,7 @@
     "ModelManagerMixinCML",
     "ImportersMixinCML",
     "BOBJModelVAOMixinCML",
-    "ModelInstanceMixinCML",
-    "ModelFormMixinCML",
-    "FormRendererMixinCML",
-    "ModelFormRendererMixinCML",
-    "UIFormPanelMixinCML",
-    "UIModelFormPanelMixinCML"
+    "ModelInstanceMixinCML"
   ],
   "injectors": {
     "defaultRequire": 1

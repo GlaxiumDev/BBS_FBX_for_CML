@@ -3,12 +3,10 @@ package elgatopro300.bbsfbx.mixin;
 import elgatopro300.bbsfbx.model.fbx.loaders.FBXCompiledData;
 import elgatopro300.bbsfbx.model.fbx.loaders.IShapeKeyHolder;
 
-import mchorse.bbs_mod.BBSModClient;
 import mchorse.bbs_mod.bobj.BOBJArmature;
 import mchorse.bbs_mod.bobj.BOBJLoader;
 import mchorse.bbs_mod.cubic.render.vao.BOBJModelVAO;
 import mchorse.bbs_mod.obj.shapes.ShapeKeys;
-import mchorse.bbs_mod.resources.Link;
 import mchorse.bbs_mod.ui.framework.elements.utils.StencilMap;
 import mchorse.bbs_mod.utils.joml.Matrices;
 
@@ -16,41 +14,25 @@ import org.joml.Matrix4f;
 import org.joml.Vector3f;
 import org.joml.Vector4f;
 import org.lwjgl.opengl.GL15;
-import org.lwjgl.opengl.GL30;
 
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.Redirect;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import java.util.Map;
 
 /**
- * CML twin of the FS addon's {@code BOBJModelVAOMixin}, plus one extra piece
- * FS didn't need: per-material draw-call splitting.
- *
- * <p><b>Shape keys</b> (mirrors FS): {@code updateMesh} is fully replaced
- * (same technique the FS mixin uses) to blend {@code FBXCompiledData}'s
- * shape-key vertex/normal deltas by the live {@link ShapeKeys} weights
- * BEFORE the bone-skinning blend, reusing the exact same skinning/lighting
- * math CML's own {@code updateMesh} uses (verified against its source) so
- * behavior is identical when no shape keys are active.
- *
- * <p><b>Per-material rendering</b> (CML-only addition, FS doesn't need this
- * - its {@code BOBJModel} already takes one CompiledData per material): CML
- * merges every FBX mesh into a single CompiledData
- * ({@code FBXModelLoaderCML}), so multi-material models need a way to bind a
- * different texture for different vertex ranges. CML's {@code BOBJModelVAO}
- * has no such concept - it only supports one texture, or per-BONE texture
- * overrides (via {@code BOBJBone.texture}), neither of which fits "several
- * meshes merged into one draw target". This redirects the single
- * {@code glDrawArrays} call CML's {@code render()} makes in its default (no
- * bone overrides, no stencil pass) path into one draw call per distinct FBX
- * material, each with its own texture bound - everything else about
- * {@code render()} (attribute setup, stencil path, per-bone override path)
- * is untouched.
+ * CML twin of the FS addon's {@code BOBJModelVAOMixin}: {@code updateMesh}
+ * is fully replaced (same technique the FS mixin uses) to blend
+ * {@code FBXCompiledData}'s shape-key vertex/normal deltas by the live
+ * {@link ShapeKeys} weights BEFORE the bone-skinning blend, reusing the
+ * exact same skinning/lighting math CML's own {@code updateMesh} uses
+ * (verified against its source) so behavior is identical when no shape
+ * keys are active. This addon only supports one texture (or one flat
+ * color) per model, same as CML's own {@code render()} already handles
+ * natively, so nothing here touches texture binding or draw calls.
  */
 @Mixin(value = BOBJModelVAO.class, remap = false)
 public abstract class BOBJModelVAOMixinCML implements IShapeKeyHolder
@@ -70,7 +52,6 @@ public abstract class BOBJModelVAOMixinCML implements IShapeKeyHolder
     @Shadow protected abstract void processData(float[] newVertices, float[] newNormals);
 
     private ShapeKeys bbsFbx$shapeKeys;
-    private int[] bbsFbx$dominantMaterialPerTriangle;
 
     @Override
     public void bbsFbx$setShapeKeys(ShapeKeys shapeKeys)
@@ -229,94 +210,5 @@ public abstract class BOBJModelVAOMixinCML implements IShapeKeyHolder
         }
 
         GL15.glBindBuffer(GL15.GL_ARRAY_BUFFER, 0);
-    }
-
-    // ---------------------------------------------------------------
-    // Per-material draw split
-    // ---------------------------------------------------------------
-
-    /**
-     * Redirects the ONE {@code glDrawArrays} call in {@code render()}'s
-     * default path (ordinal 0: no per-bone texture overrides, no stencil
-     * pass - the two other draw call sites, the stencil pass and the
-     * per-bone-override path, are untouched). When the compiled data is a
-     * multi-material {@code FBXCompiledData}, this issues one draw call per
-     * material instead of the single one CML's own code would; otherwise it
-     * just calls through unchanged.
-     */
-    @Redirect(
-            method = "render",
-            at = @At(value = "INVOKE", target = "Lorg/lwjgl/opengl/GL30;glDrawArrays(III)V"),
-            remap = false
-    )
-    private void bbsFbx$splitDrawByMaterial(int mode, int first, int count)
-    {
-        if (!(this.data instanceof FBXCompiledData fbxData) || !fbxData.hasMultipleMaterials() || fbxData.materialTextures == null)
-        {
-            GL30.glDrawArrays(mode, first, count);
-            return;
-        }
-
-        if (this.bbsFbx$dominantMaterialPerTriangle == null)
-        {
-            this.bbsFbx$buildDominantMaterialPerTriangle(fbxData);
-        }
-
-        int[] perTriangle = this.bbsFbx$dominantMaterialPerTriangle;
-        int materialCount = fbxData.materialNames.length;
-
-        for (int material = 0; material < materialCount; material++)
-        {
-            Link loadTimeDefault = material < fbxData.materialTextures.length ? fbxData.materialTextures[material] : null;
-            String materialName = material < fbxData.materialNames.length ? fbxData.materialNames[material] : null;
-            Link texture = elgatopro300.bbsfbx.forms.FBXMaterialRenderContext.resolve(materialName, loadTimeDefault);
-
-            if (texture != null)
-            {
-                BBSModClient.getTextures().bindTexture(texture);
-            }
-
-            int start = -1;
-
-            for (int triangle = 0; triangle < perTriangle.length; triangle++)
-            {
-                boolean draw = perTriangle[triangle] == material;
-
-                if (draw && start == -1)
-                {
-                    start = triangle;
-                }
-                else if (!draw && start != -1)
-                {
-                    GL30.glDrawArrays(mode, start * 3, (triangle - start) * 3);
-                    start = -1;
-                }
-            }
-
-            if (start != -1)
-            {
-                GL30.glDrawArrays(mode, start * 3, (perTriangle.length - start) * 3);
-            }
-        }
-    }
-
-    private void bbsFbx$buildDominantMaterialPerTriangle(FBXCompiledData fbxData)
-    {
-        int triangleCount = this.count / 3;
-        int[] perTriangle = new int[triangleCount];
-
-        for (int triangle = 0; triangle < triangleCount; triangle++)
-        {
-            /* All 3 vertices of a triangle always originate from the same
-             * source mesh (FBXMeshCompiler#compileMergedWithMaterials never
-             * mixes vertices across meshes within one face), so the first
-             * vertex's material is the whole triangle's material - no
-             * majority vote needed (unlike CML's own per-bone dominant
-             * calculation, which has to handle a triangle whose 3 vertices
-             * are skinned to different bones). */
-            perTriangle[triangle] = fbxData.materialIndexData[triangle * 3];
-        }
-
-        this.bbsFbx$dominantMaterialPerTriangle = perTriangle;
     }
 }

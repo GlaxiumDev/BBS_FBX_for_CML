@@ -18,11 +18,7 @@ import org.lwjgl.assimp.Assimp;
 
 import java.io.File;
 import java.io.InputStream;
-import java.util.ArrayList;
 import java.util.Collection;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
 import java.util.Set;
 
 /**
@@ -41,16 +37,16 @@ import java.util.Set;
  *   <li>CML's {@code BOBJModel} constructor takes ONE {@code CompiledData}
  *       for the whole model, not a {@code List<CompiledData>} (one per
  *       mesh) like FS's does - so every mesh gets flattened into a single
- *       merged mesh via {@link FBXMeshCompiler#compileMergedWithMaterials},
- *       which also tags each vertex with which FBX material it came from.</li>
- *   <li>Per-material textures: resolved by {@link FBXTextureResolverCML}
- *       into a {@code Link[]} attached to the compiled data.
- *       {@code BOBJModelVAOMixinCML} reads that back at render time to
- *       issue one draw call per material - CML's {@code IModelLoader} has no
- *       {@code findMaterialTexture}/{@code ensureMaterialFolder} helpers and
- *       its {@code ModelInstance} has no {@code materials}/
- *       {@code materialTextures} fields the way FS's does, so this can't
- *       reuse FS's mechanism directly.</li>
+ *       merged mesh via {@link FBXMeshCompiler#compileMergedWithMaterials}
+ *       (used purely for its shape-key merging; the per-material tagging it
+ *       also produces isn't consumed - this addon only supports one texture
+ *       or one flat color for the whole model, same as FS).</li>
+ *   <li>Texture/color: {@link FBXTextureResolverCML} resolves ONE texture
+ *       for the whole model, exactly like FS's {@code ModelInstance.texture}
+ *       default. If no texture is found anywhere, any flat Base Color
+ *       captured off the material is applied straight to
+ *       {@code ModelInstance.color} - no PNG or folder is ever generated for
+ *       it.</li>
  *   <li>Shape keys: {@link FBXShapeKeyModelCML} overrides
  *       {@code getShapeKeys()} (CML's own {@code BOBJModel} hardcodes it
  *       empty), and {@code BOBJModelVAOMixinCML} does the actual per-vertex
@@ -141,9 +137,6 @@ public class FBXModelLoaderCML implements IModelLoader
 
             FBXCompiledData merged = FBXMeshCompiler.compileMergedWithMaterials(data);
 
-            Link[] materialTextures = FBXTextureResolverCML.resolveMaterialTextures(data, merged.materialNames, model, links, models.provider);
-            merged.setMaterialTextures(materialTextures);
-
             BOBJArmature armature = null;
             if (!data.armatures.isEmpty())
             {
@@ -160,36 +153,18 @@ public class FBXModelLoaderCML implements IModelLoader
 
             Animations animations = FBXAnimationConverter.convert(data.actions, models.parser);
 
-            Link textureLink = materialTextures.length > 0 && materialTextures[0] != null
-                    ? materialTextures[0]
-                    : FBXTextureResolverCML.resolveTexture(data, model, links, models.provider);
+            Link textureLink = FBXTextureResolverCML.resolveTexture(data, model, links, models.provider);
 
             ModelInstance modelInstance = new ModelInstance(id, bobjModel, animations, textureLink);
 
-            if (modelInstance instanceof IMaterialTextureHolder holder)
+            if (textureLink == null)
             {
-                List<String> materials = new ArrayList<>();
-                Map<String, Link> defaults = new LinkedHashMap<>();
+                float[] solidColor = FBXTextureResolverCML.detectSolidColor(data);
 
-                for (int i = 0; i < merged.materialNames.length; i++)
+                if (solidColor != null)
                 {
-                    String name = merged.materialNames[i];
-
-                    if (name == null || name.isEmpty())
-                    {
-                        continue;
-                    }
-
-                    materials.add(name);
-
-                    if (i < materialTextures.length && materialTextures[i] != null)
-                    {
-                        defaults.put(name, materialTextures[i]);
-                    }
+                    modelInstance.color = FBXTextureResolverCML.packColor(solidColor);
                 }
-
-                holder.bbsFbx$setMaterials(materials);
-                holder.bbsFbx$setMaterialTextures(defaults);
             }
 
             modelInstance.applyConfig(config);
