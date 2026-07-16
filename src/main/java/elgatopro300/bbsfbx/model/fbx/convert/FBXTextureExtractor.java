@@ -23,7 +23,6 @@ import java.util.Set;
 /**
  * Extracts embedded FBX textures (Blender's "Embed Textures" export option)
  * into {@code <model>/textures/<material>/default.png}, matching where
- * {@link mchorse.bbs_mod.cubic.model.loaders.IModelLoader#findMaterialTexture}
  * looks. Skips materials whose texture is a plain external file reference,
  * never overwrites a texture that's already there, and falls back to baking a
  * solid-color PNG for materials that only have a flat Base Color.

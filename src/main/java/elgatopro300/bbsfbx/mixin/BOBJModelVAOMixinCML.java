@@ -246,7 +246,7 @@ public abstract class BOBJModelVAOMixinCML implements IShapeKeyHolder
      */
     @Redirect(
             method = "render",
-            at = @At(value = "INVOKE", target = "Lorg/lwjgl/opengl/GL30;glDrawArrays(III)V", ordinal = 0),
+            at = @At(value = "INVOKE", target = "Lorg/lwjgl/opengl/GL30;glDrawArrays(III)V"),
             remap = false
     )
     private void bbsFbx$splitDrawByMaterial(int mode, int first, int count)
